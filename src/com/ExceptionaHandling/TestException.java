@@ -1,25 +1,41 @@
 package com.ExceptionaHandling;
 
-import java.time.Instant;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
-public class TestException {
-
-	public static void main(String[] args) {
-		int a = 10;
-		int b =0;
-		int c;
-		try {
-			c = a/b;
-			System.out.println("div : "+c);
-		}
-		catch(ArithmeticException e) {
-			System.out.println(e.getMessage());
-		}
-		System.out.println(System.currentTimeMillis());
-		System.out.println(Instant.now());
-		System.out.println("\n====================================");
-		System.out.println("======Welcome to my program=======");
-		System.out.println("====================================");
-		}
+class TestException
+	{
+	    public static void main(String[] args)
+	    {
+	        Scanner in = new Scanner(System.in);
+	        try
+	        {
+	            System.out.println("Enter the number a : ");
+	            int a = in.nextInt();
+	            System.out.println("Enter the number b : ");
+	            int b = in.nextInt();
+	            int c = a / b;
+	            System.out.println("c : "+c);
+	        }
+	        catch(ArithmeticException e)
+	        {
+	            e.printStackTrace();
+	        }
+	        catch(InputMismatchException e)
+	        {
+	            e.printStackTrace();
+	        }
+	        catch (NumberFormatException e)
+	        {
+	            e.printStackTrace();
+	        }
+	        catch (Exception e)
+	        {
+	            e.printStackTrace();
+	        }
+	        finally
+	        {
+	            in.close();
+	        }
+	    }
 	}
-	
