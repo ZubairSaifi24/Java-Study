@@ -1,24 +1,35 @@
 package com.TheCollectionFramework;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class EmployeeMain 
+public class EmployeeMain
 {
-	public static void main(String[] args) 
-	{
-		Employee e1 = new Employee(1, "zubair", "amroha");
-		Employee e2 = new Employee(2, "adil", "amroha-1");
-		Employee e3 = new Employee(3, "dushyant", "amroha-2");
-		Employee e4 =  new Employee(4, "ahamed", "lucknow");
-		
-		ArrayList<Employee> employ = new ArrayList<>();
-		employ.add(e1);
-		employ.add(e2);
-		employ.add(e3);
-		employ.add(e4);
-		
-		System.out.println(employ);
-		
-	}
+    public static void main(String[] args)
+    {
+        ArrayList<Employee> empList = new ArrayList<>();
+
+        empList.add(new Employee(15,"Adil","Amroha ",23124.4));
+        empList.add(new Employee(262,"salamn","Amroha ",224324.4));
+        empList.add(new Employee(37,"Aa","Amroha ",234324.4));
+        empList.add(new Employee(84,"PT","Amroha ",234324.4));
+        empList.add(new Employee(59,"Amri","Amroha ",234324.4));
+        empList.add(new Employee(60,"Anil","Amroha ",23324.4));
+        empList.add(new Employee(745,"dem","Amroha ",23424.4));
+        empList.add(new Employee(834,"action","Amroha ",24324.4));
+        empList.add(new Employee(94,"sdf","Amroha ",23434.4));
+        empList.add(new Employee(10,"zubair","Amroha ",24324.4));
+        empList.add(new Employee(11,"hat","Amroha ",23432.4));
+
+
+        System.out.println();
+        System.out.println(empList);
+
+        Collections.sort(empList);
+
+        System.out.println();
+        System.out.println(empList);
+
+    }
 }
+
